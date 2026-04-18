@@ -5,7 +5,6 @@ DB_DIR = "data"
 DB_PATH = os.path.join(DB_DIR, "patients.db")
 
 def connect_db():
-    # Ensure directory exists (VERY IMPORTANT for Streamlit Cloud)
     os.makedirs(DB_DIR, exist_ok=True)
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
@@ -27,3 +26,25 @@ def create_table():
 
     conn.commit()
     conn.close()
+
+def insert_patient(name, age, hr, oxygen, status):
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    INSERT INTO patients (name, age, heart_rate, oxygen, status)
+    VALUES (?, ?, ?, ?, ?)
+    """, (name, age, hr, oxygen, status))
+
+    conn.commit()
+    conn.close()
+
+def get_all_patients():
+    conn = connect_db()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM patients ORDER BY created_at DESC")
+    data = cursor.fetchall()
+
+    conn.close()
+    return data
