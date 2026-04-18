@@ -1,25 +1,19 @@
-/* Import Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-/* Apply globally */
-html, body, [class*="css"] {
-    font-family: 'Montserrat', sans-serif;
+<style>
+html, body, [class*="css"], [class*="st-"] {
+    font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Headings styling */
-h1, h2, h3 {
-    font-weight: 600;
-    letter-spacing: 0.5px;
+/* Sidebar */
+section[data-testid="stSidebar"] * {
+    font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Improve readability */
-body {
-    letter-spacing: 0.3px;
+/* Buttons & inputs */
+button, input, textarea {
+    font-family: 'Montserrat', sans-serif !important;
 }
-
-/* Card style (optional but looks premium) */
-.stMetric {
-    background-color: #1c1f26;
-    padding: 15px;
-    border-radius: 12px;
-}
+</style>
+""", unsafe_allow_html=True)
