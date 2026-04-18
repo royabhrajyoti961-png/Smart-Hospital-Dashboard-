@@ -1,4 +1,25 @@
+/* Import Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Apply globally */
+html, body, [class*="css"] {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Headings styling */
+h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Improve readability */
 body {
-    background-color: #0e1117;
-    color: white;
+    letter-spacing: 0.3px;
+}
+
+/* Card style (optional but looks premium) */
+.stMetric {
+    background-color: #1c1f26;
+    padding: 15px;
+    border-radius: 12px;
 }
