@@ -1,19 +1,25 @@
 st.markdown("""
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* Apply everywhere */
 html, body, [class*="css"], [class*="st-"] {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 /* Sidebar */
 section[data-testid="stSidebar"] * {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
-/* Buttons & inputs */
+/* Inputs, buttons */
 button, input, textarea {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 600;
 }
 </style>
 """, unsafe_allow_html=True)
